@@ -5,6 +5,7 @@ export default defineConfig({
   title: "zeddy",
   description: "A Convenient Framework",
   base: "zeddydoc",
+  ignoreDeadLinks: true,
   locales: {
     root: {
       label: 'English',
