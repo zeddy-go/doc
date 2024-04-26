@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "zeddy",
   description: "A Convenient Framework",
+  base: "/doc/",
   ignoreDeadLinks: true,
   locales: {
     root: {
