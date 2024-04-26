@@ -13,7 +13,7 @@ export default defineConfig({
       link: '/en'
     },
     zh: {
-      label: 'Chinese',
+      label: '中文',
       lang: 'zh',
       link: '/zh'
     }
