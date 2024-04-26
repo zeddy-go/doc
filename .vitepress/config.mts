@@ -26,19 +26,17 @@ export default defineConfig({
     sidebar: {
       '/en/': [
         {
-          text: 'Examples',
+          text: '',
           items: [
-            { text: 'Markdown Examples', link: '/en/markdown-examples' },
-            { text: 'Runtime API Examples', link: '/en/api-examples' }
+            { text: 'quick start', link: '/en/quickstart' },
           ]
         }
       ],
       '/zh/': [
         {
-          text: 'Examples',
+          text: '',
           items: [
-            { text: 'Markdown Examples', link: '/zh/markdown-examples' },
-            { text: 'Runtime API Examples', link: '/zh/api-examples' }
+            { text: '快速开始', link: '/zh/quickstart' },
           ]
         }
       ],
