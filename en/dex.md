@@ -4,15 +4,18 @@ layout: home
 
 hero:
   name: "zeddy"
-  text: "do things simply"
+  text: "A Convenient Framework"
   tagline: 
   actions:
     - theme: brand
-      text: quick start
-      link: /en/quickstart
+      text: Markdown Examples
+      link: /en/markdown-examples
+    - theme: alt
+      text: API Examples
+      link: /en/api-examples
 
 features:
-  - title: modularization
+  - title: Feature A
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
