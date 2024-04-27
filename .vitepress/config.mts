@@ -33,13 +33,13 @@ export default withMermaid(
                             items: [
                                 { text: 'quick start', link: '/en/quickstart' },
                                 {
-                                    text: '概念', items: [
+                                    text: 'concept', items: [
                                         { text: 'IoC', link: '/en/concept/ioc.md' },
-                                        { text: '模块', link: '/en/concept/module.md' }
+                                        { text: 'module', link: '/en/concept/module.md' }
                                     ]
                                 },
                                 {
-                                    text: '模块', items: [
+                                    text: 'module list', items: [
                                         {text: 'configx', link: '/en/module/configx'},
                                         {text: 'ginx', link: '/en/module/ginx'}
                                     ]
@@ -59,7 +59,7 @@ export default withMermaid(
                                     ]
                                 },
                                 {
-                                    text: '模块', items: [
+                                    text: '模块列表', items: [
                                         {text: 'configx', link: '/zh/module/configx'},
                                         {text: 'ginx', link: '/zh/module/ginx'}
                                     ]
