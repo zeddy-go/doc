@@ -27,21 +27,21 @@ export default withMermaid(
                 ],
 
                 sidebar: {
-                    '/en/': [
+                    '/': [
                         {
                             text: '',
                             items: [
-                                { text: 'quick start', link: '/en/quickstart' },
+                                { text: 'quick start', link: '/quickstart' },
                                 {
                                     text: 'concept', items: [
-                                        { text: 'IoC', link: '/en/concept/ioc.md' },
-                                        { text: 'module', link: '/en/concept/module.md' }
+                                        { text: 'IoC', link: '/concept/ioc.md' },
+                                        { text: 'module', link: '/concept/module.md' }
                                     ]
                                 },
                                 {
                                     text: 'module list', items: [
-                                        {text: 'configx', link: '/en/module/configx'},
-                                        {text: 'ginx', link: '/en/module/ginx'}
+                                        {text: 'configx', link: '/module/configx'},
+                                        {text: 'ginx', link: '/module/ginx'}
                                     ]
                                 }
                             ]
