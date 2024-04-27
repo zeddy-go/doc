@@ -13,12 +13,10 @@ export default withMermaid(
                 root: {
                     label: 'English',
                     lang: 'en',
-                    link: '/en/'
                 },
                 zh: {
                     label: '中文',
                     lang: 'zh',
-                    link: '/zh/'
                 }
             },
             themeConfig: {
