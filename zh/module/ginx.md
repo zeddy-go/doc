@@ -1,7 +1,7 @@
 # ginx
 
 ginx模块用于使用给定的handler处理相应的请求，底层使用gin。
-该模块封装了gin的路由相关操作，实现了不限制handler方法的入参和出参列表的特性，最大的好处是降低了心智负担。
+该模块封装了gin的路由相关操作，实现了不限制handler方法的入参和出参列表的特性。
 ginx模块在实例化时提供两个option方法：
 * ginx.WithCustomEngine 用于使用自定义的gin实例
 * ginx.WithPrefix 用于设置读取配置的层级，默认是根层级
@@ -59,7 +59,7 @@ func (uh *UserHandler) Hello(sorts *ginx.Sorts) {}
 与上面的例子相同，这里的例子也可以一起作为同一个handler的参数。
 
 ## handler 出参
-虽然出参仍然是可变的，但是为了ginx能正常处理出参并合适的返回响应，出参也是需要遵循一定的规则的。
+虽然出参仍然是可变的，但是为了ginx能正确处理出参并返回合适的响应，出参也是需要遵循一定的规则的。
 
 ginx 默认的响应结构体遵循 Restful 风格。
 

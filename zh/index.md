@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "zeddy"
-  text: "以IoC为基础\n博取众家之长"
+  text: "以IoC/DI为基础的Go开发框架"
   tagline: 
   actions:
     - theme: brand

@@ -1,6 +1,6 @@
 # configx
 
-框架模块 `configx` 负责读取配置，供其他模块使用。
+模块 `configx` 负责读取配置，供其他模块使用。
 `configx` 使用 github.com/spf13/viper 管理配置，`confix` 将它设置为读取配置后再自动读取环境变量，这样环境变量将会覆盖已有配置项的值。
 使用配置则是直接使用viper包，减少心智负担。
 
@@ -23,6 +23,8 @@ configx.WithPath 方法接收一个路径。同样的，环境变量也能覆盖
 
 ## 使用配置
 使用配置代码如下：
+
+通过依赖注入使用
 ```go
 container.Invoke(func(c *viper.Viper) {
     c.GetString("xxx")
