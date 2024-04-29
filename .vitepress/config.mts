@@ -8,6 +8,7 @@ export default withMermaid(
             title: "zeddy",
             description: "A Convenient Framework",
             ignoreDeadLinks: true,
+            base: "/doc/",
             locales: {
                 root: {
                     label: 'English',
