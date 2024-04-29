@@ -7,7 +7,6 @@ export default withMermaid(
         ...defineConfig({
             title: "zeddy",
             description: "A Convenient Framework",
-            base: "/doc/",
             ignoreDeadLinks: true,
             locales: {
                 root: {
