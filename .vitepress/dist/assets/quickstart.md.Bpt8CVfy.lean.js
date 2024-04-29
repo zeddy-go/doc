@@ -1,0 +1,1 @@
+import{_ as s,c as e,o as a,a2 as n}from"./chunks/framework.C9InrCCS.js";const m=JSON.parse('{"title":"Quick Start","description":"","frontmatter":{},"headers":[],"relativePath":"quickstart.md","filePath":"quickstart.md"}'),i={name:"quickstart.md"},t=n("",41),o=[t];function p(l,r,c,d,h,u){return a(),e("div",null,o)}const k=s(i,[["render",p]]);export{m as __pageData,k as default};
