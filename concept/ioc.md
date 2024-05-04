@@ -39,3 +39,38 @@ container.Bind[*A](func() *A {
     return &A{}
 }, container.NoSingleton())
 ```
+
+## Issues and Solutions of Implicit Interfaces
+Because Go is an implicit interface, when the container processes objects, the behavior of binding or looking up objects may be inconsistent with expectations due to different objects implementing the same interface.
+The container package implements the feature of binding based on a string-type key.
+Objects with keys and those without are independent of each other. 
+When you have two objects that implement the same interface and you need to put them into the container, use keys to distinguish them.
+```go
+type Human interface {
+    Say()
+}
+
+func NewStudent() *Student {
+    return &Student{}
+}
+type Student struct {}
+func (*Student) Say() {
+    println("I am student!")
+}
+
+func NewTeacher() *Teacher {
+    return &Teacher{}
+}
+type Teacher struct {}
+func (*Teacher) Say() {
+    println("I am teacher!")
+}
+
+container.Bind[Human](NewStudent, container.WithKey("student"))
+container.Bind[Human](NewTeacher, container.WithKey("teacher"))
+
+s, _ := container.Resolve[Human](container.WithResolveKey("student")) //Student Object
+t, _ := container.Resolve[Human](container.WithResolveKey("teacher")) //Teacher Object
+
+foo, err := container.Resolve[Human]() //err is not nil, unable to find a non-key bound object implementing Human.
+```

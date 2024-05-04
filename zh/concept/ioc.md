@@ -37,3 +37,37 @@ container.Bind[*A](func() *A {
     return &A{}
 }, container.NoSingleton())
 ```
+
+## 隐式接口的问题以及解决方案
+因为golang为隐式接口，容器在处理对象时，可能因为不同对象都实现了同一接口而导致绑定或查找对象的行为与预期不一致。
+container 包实现了按照一个字符串类型的key来绑定的特性。
+有key和无key的对象是相互独立的，当你有两个实现了同一个接口的对象需要放到容器中时，使用key开区分他们。
+```go
+type Human interface {
+    Say()
+}
+
+func NewStudent() *Student {
+    return &Student{}
+}
+type Student struct {}
+func (*Student) Say() {
+    println("I am student!")
+}
+
+func NewTeacher() *Teacher {
+    return &Teacher{}
+}
+type Teacher struct {}
+func (*Teacher) Say() {
+    println("I am teacher!")
+}
+
+container.Bind[Human](NewStudent, container.WithKey("student"))
+container.Bind[Human](NewTeacher, container.WithKey("teacher"))
+
+s, _ := container.Resolve[Human](container.WithResolveKey("student")) //学生对象
+t, _ := container.Resolve[Human](container.WithResolveKey("teacher")) //老师对象
+
+foo, err := container.Resolve[Human]() //err为非nil,找不到实现了Human的非key绑定对象
+```
